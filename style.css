@@ -14,7 +14,7 @@ body,
 
 body {
   font-family: sans-serif;
-  background-color: #f9fbfd;
+  background-color: #ffffff;
 }
 
 .wrapper {
@@ -31,6 +31,7 @@ header {
 }
 
 .card {
+  text-align: center;
   background-color: hsl(0, 0%, 100%);
   border-radius: 5px;
   border-width: 1px;
@@ -46,7 +47,7 @@ header {
   content: " ";
   display: block;
   width: 100%;
-  background: #e7e9eb;
+  background: #38040e;
   height: 2px;
 }
 
@@ -133,4 +134,4 @@ button[disabled] {
 @media (max-width: 500px) {
   .btn {
     font-size: 0.8rem;
-  }
+  } 
