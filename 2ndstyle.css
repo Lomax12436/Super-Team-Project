@@ -1,0 +1,49 @@
+.Input {
+width: 50%;
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+margin: 5%;
+}
+
+.Output {
+width: 50%;
+border-color: black;
+border-style: solid;
+display: flex;
+border-radius: 10px;
+flex-wrap: wrap;
+}
+
+body {
+display: flex;
+font-family: sans-serif;
+background-image: url("assets/2413176.jpg");
+background-color: rgb(197, 175, 147);
+}
+
+.input-area input {
+display: inline-block;
+word-wrap: break-word;
+}
+
+.input-area {
+    background-color:rgb(179, 16, 16);
+    color: whitesmoke;
+    width: 40%;
+    border-radius: 10px;
+    margin: 2.5%;
+    height: 33%;
+    text-align: center;
+    font-size: 2vw;
+}
+
+.Output p {
+background-color: whitesmoke;
+border-style: solid;
+border-color: black;
+width: 40%;
+height: auto;
+margin: 2.5%;
+padding: 0%;
+}
