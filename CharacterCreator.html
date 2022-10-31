@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="CharacterCreator.css"/>
+    <title>Character Creation</title>
+</head>
+<body>
+    <div class="row">
+        <div class="col s12 m6 area">
+            <div class="input-field">
+                <input placeholder="Character Name" id="Name" type="text" class="validate">
+                <label>Character Name</label>
+            </div>    
+    
+            <div class="input-field">
+                <select>
+                    <option value=""disabled selected>Choose your option</option>
+                    <option value="Barbarian">Barbarian</option>
+                    <option value="Bard">Bard</option>
+                    <option value="Cleric">Cleric</option>
+                    <option value="Druid">Druid</option>
+                    <option value="Fighter">Fighter</option>
+                    <option value="Monk">Monk</option>
+                    <option value="Paladin">Paladin</option>
+                    <option value="Ranger">Ranger</option>
+                    <option value="Rogue">Rogue</option>
+                    <option value="Sorcerer">Sorcerer</option>
+                    <option value="Warlock">Warlock</option>
+                    <option value="Wizard">Wizard</option>
+                </select>
+                <label>Class</label>
+            </div>
+    
+            <div class="input-field">
+                <select>
+                    <option value=""disabled selected>Choose your option</option>
+                    <option value="Masculine">Masculine</option>
+                    <option value="Feminine">Feminine</option>
+                </select>
+                <label>Gender Identity</label>
+            </div>  
+    
+            <div class="input-field">
+                <select>
+                    <option value=""disabled selected>Choose your option</option>
+                    <option value="Chaotic Evil">Chaotic Evil</option>
+                    <option value="Chaotic Good">Chaotic Good</option>
+                    <option value="Chaotic Neutral">Chaotic Neutral</option>
+                    <option value="Lawful Evil">Lawful Evil</option>
+                    <option value="Lawful Good">Lawful Good</option>
+                    <option value="Lawful Neutral">Lawful Neutral</option>
+                    <option value="Neutral">Neutral</option>
+                    <option value="Neutral Evil">Neutral Evil</option>
+                    <option value="Neutral Good">Neutral Good</option>
+                </select>
+                <label>Alignment</label>
+            </div>
+    
+            <div class="input-field">
+                <select>
+                    <option value=""disabled selected>Choose your option</option>
+                    <option value="Dragonborn">Dragonborn</option>
+                    <option value="Dwarf">Dwarf</option>
+                    <option value="Elf">Elf</option>
+                    <option value="Gnome">Gnome</option>
+                    <option value="Half-Elf">Half-Elf</option>
+                    <option value="Half-Orc">Half-Orc</option>
+                    <option value="Halfling">Halfling</option>
+                    <option value="Human">Human</option>
+                    <option value="Tiefling">Tiefling</option>
+                </select>
+                <label>Race</label>
+            </div>
+    
+            <div class="input-field">
+                <select>
+                    <option value=""disabled selected>Choose your option</option>
+                    <option value="Young">Young</option>
+                    <option value="Middle-Aged">Middle Aged</option>
+                    <option value="Elderly">Elderly</option>
+                </select>
+                <label>Age</label>
+            </div>
+            <div class="row">
+                <div class="col s12">
+                    <a class="waves-effect waves-light btn-large button">Submit</a>
+                    <a class="waves-effect waves-light btn-large button">Randomize</a>
+                    <a class="waves-effect waves-light btn-large button">Reset</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col s12 m6 sheet">
+            <p class="name">Name</p>
+            <p class="age">Age</p>
+            <p class="gender">Gender</p>
+            <p class="race">Race</p>
+            <p class="class">Class</p>
+            <p class="alignment">Alignment</p>
+            <p class="traits">Traits</p>
+            <section class="box">
+                <section class="left">
+                    <p class="value">Strength</p>
+                    <p class="value">Dexterity</p>
+                    <p class="value">Constitution</p>
+                    <p class="value">Intelligence</p>
+                    <p class="value">Wisdom</p>
+                    <p class="value">Charisma</p>
+                </section>
+                <section class="right">
+                <img src="assets/PFDD003-DnD-D20-Pin.jpg"> 
+                </section>
+            </section>
+            <div class="input-field info">
+                <textarea id="Inventory" class="materialize-textarea"></textarea>
+                <label>Inventory</label>
+            </div>
+            <div class="input-field info">
+                <textarea id="Background" class="materialize-textarea"></textarea>
+                <label>Background</label>
+            </div>    
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var elems = document.querySelectorAll('select');
+        var instances = M.FormSelect.init(elems);
+    });
+    </script>
+</body>
+</html>
