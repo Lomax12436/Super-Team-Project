@@ -6,19 +6,20 @@ body {
 }
     
 .input-field {
-    background-color: white;
+    background-color: transparent;
     width: 40%;
     border-radius: 10px;
     margin: 1%;
     text-align: center;
+    color: black;
+    
 }
     
 .sheet {
-    border-style: solid;
-    border-color: black;
     border-radius: 10px;
     display: flex;
     flex-wrap: wrap;
+    
 }
 
 .area {
@@ -79,7 +80,7 @@ body {
     margin-right: 0 !important;
 }
 
-img {
+.right img {
     width: 100%;
     width: 100%;
     border-style: solid;
@@ -96,4 +97,11 @@ img {
     margin: 1%;
     width: 48% !important;
     height: 10% !important;
+}
+
+.scroll {
+ position: fixed;
+top: 0;
+right: 0;
+height: 75vw;
 }
