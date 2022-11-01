@@ -16,7 +16,7 @@
     <title>Character Creation</title>
   </head>
   <body>
-    <div>
+    <div class="row">
       <div class="col s12 m6 area">
         <div class="input-field">
           <input
@@ -50,9 +50,8 @@
         <div class="input-field">
           <select>
             <option value="" disabled selected>Choose your option</option>
-            <option value="Male">Masculine</option>
-            <option value="Female">Feminine</option>
-            <option value="Non-Binary">Non-Binary</option>
+            <option value="Masculine">Masculine</option>
+            <option value="Feminine">Feminine</option>
           </select>
           <label class="black-text">Gender Identity</label>
         </div>
@@ -101,42 +100,42 @@
         <div class="row">
           <div class="col s12">
             <a class="waves-effect waves-light btn-large button">Submit</a>
-            <a class="waves-effect waves-light btn-large button" id="randomize"
-              >Randomize</a
-            >
+            <a class="waves-effect waves-light btn-large button">Randomize</a>
             <a class="waves-effect waves-light btn-large button">Reset</a>
           </div>
         </div>
       </div>
+      <div class="col s12 m6 sheet">
+        <p class="name black-text">Name</p>
+        <p class="age black-text">Age</p>
+        <p class="gender black-text">Gender</p>
+        <p class="race black-text">Race</p>
+        <p class="class black-text">Class</p>
+        <p class="alignment black-text">Alignment</p>
+        <p class="traits black-text">Traits</p>
+        <section class="box">
+          <section class="left">
+            <p class="value">Strength</p>
+            <p class="value">Dexterity</p>
+            <p class="value">Constitution</p>
+            <p class="value">Intelligence</p>
+            <p class="value">Wisdom</p>
+            <p class="value">Charisma</p>
+          </section>
+          <section class="right">
+            <img src="assets/PFDD003-DnD-D20-Pin.jpg" />
+          </section>
+        </section>
+        <div class="input-field info">
+          <textarea id="Inventory" class="materialize-textarea"></textarea>
+          <label>Inventory</label>
+        </div>
+        <div class="input-field info">
+          <textarea id="Background" class="materialize-textarea"></textarea>
+          <label>Background</label>
+        </div>
+      </div>
     </div>
-    <section class="charSec">
-      <div id="greenDragon">
-        <img
-          src="./assets/Ancient-Green-Dragon-PNG-Photos.png"
-          alt="large green dragon"
-        />
-      </div>
-      <div class="col s12 sheet">
-        <div class="responsive right">
-          <img src="assets/PFDD003-DnD-D20-Pin.jpg" alt="character display" />
-        </div>
-        <div>
-          <p id="namePop">Name</p>
-          <p id="agePop">Age</p>
-          <p id="genderPop">Gender</p>
-          <p id="racePop">Race</p>
-          <p id="classPop">Class</p>
-          <p id="alignPop">Alignment</p>
-        </div>
-      </div>
-      <div>
-        <img
-          id="redDragon"
-          src="./assets/Dragon-No-Background.png"
-          alt="Large red dragon"
-        />
-      </div>
-    </section>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script>
       document.addEventListener("DOMContentLoaded", function () {
