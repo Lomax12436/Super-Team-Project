@@ -1,107 +1,125 @@
-body {
-    font-family: sans-serif;
-    background-image: url("assets/2413176.jpg");
-    background-color: rgb(197, 175, 147);
-    margin: 5%;
-}
-    
-.input-field {
-    background-color: transparent;
-    width: 40%;
-    border-radius: 10px;
-    margin: 1%;
-    text-align: center;
-    color: black;
-    
-}
-    
-.sheet {
-    border-radius: 10px;
-    display: flex;
-    flex-wrap: wrap;
-    
-}
+html, 
+body, 
 
-.area {
-    display: flex;
-    flex-wrap: wrap;
-}
+    *  {
+        box-sizing: border-box;
+        }
 
-.sheet p {
-    border-style: solid;
-    border-color: black;
-    border-radius: 10px;
-    background-color: whitesmoke;
-    text-align: center;
-    margin: 1%;
-}
+        .header {
+         text-align: center;
+         padding: auto;
+         color: black;
+         text-decoration: underline rgb(179, 16, 16);
+         position: relative;
+         margin: auto;
+         font-family: Georgia, 'Times New Roman', Times, serif;
+         font-size: 25px;   
+        }
 
-.name {
-    width: 47%;
-}
+        body {
+            font-family: sans-serif;
+            background-image: url("assets/2413176.jpg");
+            background-color: rgb(197, 175, 147);
+            margin: 5%;
+        }
+            
+        .input-field {
+            background-color: transparent;
+            width: 40%;
+            border-radius: 10px;
+            margin: 1%;
+            text-align: center;
+            color: black;
+            
+        }
+            
+        .sheet {
+            border-radius: 10px;
+            display: flex;
+            flex-wrap: wrap;
+            
+        }
 
-.age {
-    width: 23.5%;
-}
+        .area {
+            display: flex;
+            flex-wrap: wrap;
+        }
 
-.gender {
-    width: 23.5%;
-}
+        .sheet p {
+            border-style: solid;
+            border-color: black;
+            border-radius: 10px;
+            background-color: whitesmoke;
+            text-align: center;
+            margin: 1%;
+        }
 
-.race {
-    width: 48%;
-}
+        .name {
+            width: 47%;
+        }
 
-.class {
-    width: 48%;
-}
+        .age {
+            width: 23.5%;
+        }
 
-.alignment {
-    width: 48%;
-}
-.traits {
-    width: 48%;
-}
+        .gender {
+            width: 23.5%;
+        }
 
-.box{
-    display: flex;
-    flex-wrap: wrap;
-    margin: 1%;
-}
+        .race {
+            width: 48%;
+        }
 
-.left {
-    width: 33.3%;
-    margin: 0 !important;
-}
+        .class {
+            width: 48%;
+        }
 
-.right {
-    width: 66.7%;
-    height: 66.7%;
-    margin-right: 0 !important;
-}
+        .alignment {
+            width: 48%;
+        }
+        .traits {
+            width: 48%;
+        }
 
-.right img {
-    width: 100%;
-    width: 100%;
-    border-style: solid;
-    border-color: black;
-}
+        .box{
+            display: flex;
+            flex-wrap: wrap;
+            margin: 1%;
+        }
 
-.value {
-    margin-left: 0 !important;
-    padding: 0;
-    height: 15.9%;
-}
+        .left {
+            width: 33.3%;
+            margin: 0 !important;
+        }
 
-.info {
-    margin: 1%;
-    width: 48% !important;
-    height: 10% !important;
-}
+        .right {
+            width: 66.7%;
+            height: 66.7%;
+            margin-right: 0 !important;
+        }
 
-.scroll {
- position: fixed;
-top: 0;
-right: 0;
-height: 75vw;
-}
+        .right img {
+            width: 100%;
+            width: 100%;
+            border-style: solid;
+            border-color: black;
+        }
+
+        .value {
+            margin-left: 0 !important;
+            padding: 0;
+            height: 15.9%;
+        }
+
+        .info {
+            margin: 1%;
+            width: 48% !important;
+            height: 10% !important;
+        }
+
+        .scroll {
+            position: fixed;
+            top: 0;
+            right: 0;
+            height: 75vw;
+        }
