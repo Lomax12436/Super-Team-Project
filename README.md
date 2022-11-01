@@ -9,5 +9,4 @@ It offers two methods of creation:
 
  # How does it work?
  After navigating to the home page, you will select whether you would like to generate a random character or build your own. The user will select the choice the would like, and be directed to the corresponding page. 
- For example, if the user selects the 'Build Your Own' button, they will be directed to the character builder, where all options will be divided based on content and arrranged into a dropdown list to select from.
- Meanwhile, if the 'Generate Character' button is selected, the user will be redirected to a page with a randomly generated DnD character with necessary attributes as well as a name.
+When the user accesses the new page, they can select from, a variety of options contained in drop down menus, or they can select the 'Randomize' button and generate a random character within those same parameters. They may also change individual items within the randmomized chracter if they do not like a certain attribute that was generated.
