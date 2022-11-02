@@ -16,127 +16,47 @@
     <title>Character Creation</title>
   </head>
   <body>
-    <div>
-      <div class="col s12 m6 area">
-        <div class="input-field">
-          <input
-            placeholder="Character Name"
-            id="Name"
-            type="text"
-            class="validate"
-          />
-          <label class="black-text">Character Name</label>
+    <div class="row">
+      <div class="col m12 l6 side">
+        <div class="col l12 link-items">
+          <a class="hoverable" id="generate-link" href="cover.html">
+            <img
+            src="./assets/PFDD003-DnD-D20-Pin.jpg"
+            alt="Image of a 20 sided dice"
+            />
+            <h1>Create your own Dungeons and Dragons Character!</h1>
+          </a>
         </div>
+        <div class="picture">
+        <img id="charImg" src="assets/PFDD003-DnD-D20-Pin.jpg" alt="character display" />
+        </div>
+      </div>
 
-        <div class="input-field">
-          <select>
-            <option value="" disabled selected>Choose your option</option>
-            <option value="Barbarian">Barbarian</option>
-            <option value="Bard">Bard</option>
-            <option value="Cleric">Cleric</option>
-            <option value="Druid">Druid</option>
-            <option value="Fighter">Fighter</option>
-            <option value="Monk">Monk</option>
-            <option value="Paladin">Paladin</option>
-            <option value="Ranger">Ranger</option>
-            <option value="Rogue">Rogue</option>
-            <option value="Sorcerer">Sorcerer</option>
-            <option value="Warlock">Warlock</option>
-            <option value="Wizard">Wizard</option>
-          </select>
-          <label class="black-text">Class</label>
-        </div>
-
-        <div class="input-field">
-          <select>
-            <option value="" disabled selected>Choose your option</option>
-            <option value="Male">Masculine</option>
-            <option value="Female">Feminine</option>
-            <option value="Non-Binary">Non-Binary</option>
-          </select>
-          <label class="black-text">Gender Identity</label>
-        </div>
-
-        <div class="input-field">
-          <select>
-            <option value="" disabled selected>Choose your option</option>
-            <option value="Chaotic Evil">Chaotic Evil</option>
-            <option value="Chaotic Good">Chaotic Good</option>
-            <option value="Chaotic Neutral">Chaotic Neutral</option>
-            <option value="Lawful Evil">Lawful Evil</option>
-            <option value="Lawful Good">Lawful Good</option>
-            <option value="Lawful Neutral">Lawful Neutral</option>
-            <option value="Neutral">Neutral</option>
-            <option value="Neutral Evil">Neutral Evil</option>
-            <option value="Neutral Good">Neutral Good</option>
-          </select>
-          <label class="black-text">Alignment</label>
-        </div>
-
-        <div class="input-field">
-          <select>
-            <option value="" disabled selected>Choose your option</option>
-            <option value="Dragonborn">Dragonborn</option>
-            <option value="Dwarf">Dwarf</option>
-            <option value="Elf">Elf</option>
-            <option value="Gnome">Gnome</option>
-            <option value="Half-Elf">Half-Elf</option>
-            <option value="Half-Orc">Half-Orc</option>
-            <option value="Halfling">Halfling</option>
-            <option value="Human">Human</option>
-            <option value="Tiefling">Tiefling</option>
-          </select>
-          <label class="black-text">Race</label>
-        </div>
-
-        <div class="input-field">
-          <select>
-            <option value="" disabled selected>Choose your option</option>
-            <option value="Young">Young</option>
-            <option value="Middle-Aged">Middle Aged</option>
-            <option value="Elderly">Elderly</option>
-          </select>
-          <label black-text>Age</label>
-        </div>
-        <div class="row">
-          <div class="col s12">
-            <a class="waves-effect waves-light btn-large button">Submit</a>
-            <a class="waves-effect waves-light btn-large button" id="randomize"
-              >Randomize</a
-            >
-            <a class="waves-effect waves-light btn-large button">Reset</a>
+      <div class="col m12 l6 info">
+        <section class="charSec">
+          <div class="col s12 sheet">
+            <div class="button-center">
+              <a class="waves-effect waves-light btn-large button" id="randomize">Randomize</a>
+            </div>
+            <div class="randomItems">
+              <p id="namePop">Name</p>
+              <p id="agePop">Age</p>
+              <p id="genderPop">Gender</p>
+              <p id="racePop">Race</p>
+              <p id="classPop">Class</p>
+              <p id="alignPop">Alignment</p>
+            </div>
           </div>
-        </div>
+          <div class="col s12 l12">
+            <img
+              id="redDragon"
+              src="./assets/Dragon-No-Background.png"
+              alt="Large red dragon"
+            />
+          </div>
+        </section>
       </div>
     </div>
-    <section class="charSec">
-      <div id="greenDragon">
-        <img
-          src="./assets/Ancient-Green-Dragon-PNG-Photos.png"
-          alt="large green dragon"
-        />
-      </div>
-      <div class="col s12 sheet">
-        <div class="responsive right">
-          <img src="assets/PFDD003-DnD-D20-Pin.jpg" alt="character display" />
-        </div>
-        <div>
-          <p id="namePop">Name</p>
-          <p id="agePop">Age</p>
-          <p id="genderPop">Gender</p>
-          <p id="racePop">Race</p>
-          <p id="classPop">Class</p>
-          <p id="alignPop">Alignment</p>
-        </div>
-      </div>
-      <div>
-        <img
-          id="redDragon"
-          src="./assets/Dragon-No-Background.png"
-          alt="Large red dragon"
-        />
-      </div>
-    </section>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
     <script>
       document.addEventListener("DOMContentLoaded", function () {
