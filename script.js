@@ -96,6 +96,8 @@ async function populateChar() {
   }).then(function (obj){
     character.name=obj
     document.getElementById("namePop").textContent = "Name: " + character.name;
+    localStorage.setItem("charName", "Name: " + character.name);
+
   })
 
 
@@ -105,57 +107,77 @@ async function populateChar() {
 function displayImg() {
   if (character.gender == charGender[0] && character.race == charRace[0]) {
     document.getElementById("charImg").src = charDisplay[0];
+    localStorage.setItem("charDisplay", charDisplay[0]);
+
   }
   if (character.gender == charGender[1] && character.race == charRace[0]) {
     document.getElementById("charImg").src = charDisplay[1];
+    localStorage.setItem("charDisplay", charDisplay[1]);
   }
   if (character.gender == charGender[0] && character.race == charRace[1]) {
     document.getElementById("charImg").src = charDisplay[2];
+    localStorage.setItem("charDisplay", charDisplay[2]);
   }
   if (character.gender == charGender[1] && character.race == charRace[1]) {
     document.getElementById("charImg").src = charDisplay[3];
+    localStorage.setItem("charDisplay", charDisplay[3]);
   }
   if (character.gender == charGender[0] && character.race == charRace[2]) {
     document.getElementById("charImg").src = charDisplay[4];
+    localStorage.setItem("charDisplay", charDisplay[4]);
+
   }
   if (character.gender == charGender[1] && character.race == charRace[2]) {
     document.getElementById("charImg").src = charDisplay[5];
+    localStorage.setItem("charDisplay", charDisplay[5]);
   }
   if (character.gender == charGender[0] && character.race == charRace[3]) {
     document.getElementById("charImg").src = charDisplay[6];
+    localStorage.setItem("charDisplay", charDisplay[6]);
   }
   if (character.gender == charGender[1] && character.race == charRace[3]) {
     document.getElementById("charImg").src = charDisplay[7];
+    localStorage.setItem("charDisplay", charDisplay[7]);
   }
   if (character.gender == charGender[0] && character.race == charRace[4]) {
     document.getElementById("charImg").src = charDisplay[8];
+    localStorage.setItem("charDisplay", charDisplay[8]);
   }
   if (character.gender == charGender[1] && character.race == charRace[4]) {
     document.getElementById("charImg").src = charDisplay[9];
+    localStorage.setItem("charDisplay", charDisplay[9]);
   }
   if (character.gender == charGender[0] && character.race == charRace[5]) {
     document.getElementById("charImg").src = charDisplay[10];
+    localStorage.setItem("charDisplay", charDisplay[10]);
   }
   if (character.gender == charGender[1] && character.race == charRace[5]) {
     document.getElementById("charImg").src = charDisplay[11];
+    localStorage.setItem("charDisplay", charDisplay[11]);
   }
   if (character.gender == charGender[0] && character.race == charRace[6]) {
     document.getElementById("charImg").src = charDisplay[12];
+    localStorage.setItem("charDisplay", charDisplay[12]);
   }
   if (character.gender == charGender[1] && character.race == charRace[6]) {
     document.getElementById("charImg").src = charDisplay[13];
+    localStorage.setItem("charDisplay", charDisplay[13]);
   }
   if (character.gender == charGender[0] && character.race == charRace[7]) {
     document.getElementById("charImg").src = charDisplay[14];
+    localStorage.setItem("charDisplay", charDisplay[14]);
   }
   if (character.gender == charGender[1] && character.race == charRace[7]) {
     document.getElementById("charImg").src = charDisplay[15];
+    localStorage.setItem("charDisplay", charDisplay[15]);
   }
   if (character.gender == charGender[0] && character.race == charRace[8]) {
     document.getElementById("charImg").src = charDisplay[16];
+    localStorage.setItem("charDisplay", charDisplay[16]);
   }
   if (character.gender == charGender[1] && character.race == charRace[8]) {
     document.getElementById("charImg").src = charDisplay[17];
+    localStorage.setItem("charDisplay", charDisplay[17]);
   }
   apiStuff();
 }
@@ -174,6 +196,11 @@ async function apiStuff() {
       character.align + ": " + alignment;
     document.getElementById("genderPop").textContent = character.gender;
     document.getElementById("classPop").textContent = character.class;
+    localStorage.setItem("charAge", character.age + ": " + age);
+    localStorage.setItem("charGender", character.gender);
+    localStorage.setItem("charRace", character.race + ": " + size_description);
+    localStorage.setItem("charClass", character.class);
+    localStorage.setItem("charAlignment", character.align + ": " + alignment);
   }
   if (character.race == charRace[1]) {
     const response = await fetch("https://www.dnd5eapi.co/api/races/dwarf");
@@ -186,6 +213,11 @@ async function apiStuff() {
       character.align + ": " + alignment;
     document.getElementById("genderPop").textContent = character.gender;
     document.getElementById("classPop").textContent = character.class;
+    localStorage.setItem("charAge", character.age + ": " + age);
+    localStorage.setItem("charGender", character.gender);
+    localStorage.setItem("charRace", character.race + ": " + size_description);
+    localStorage.setItem("charClass", character.class);
+    localStorage.setItem("charAlignment", character.align + ": " + alignment);
   }
   if (character.race == charRace[2]) {
     const response = await fetch("https://www.dnd5eapi.co/api/races/elf");
@@ -198,6 +230,11 @@ async function apiStuff() {
       character.align + ": " + alignment;
     document.getElementById("genderPop").textContent = character.gender;
     document.getElementById("classPop").textContent = character.class;
+    localStorage.setItem("charAge", character.age + ": " + age);
+    localStorage.setItem("charGender", character.gender);
+    localStorage.setItem("charRace", character.race + ": " + size_description);
+    localStorage.setItem("charClass", character.class);
+    localStorage.setItem("charAlignment", character.align + ": " + alignment);
   }
   if (character.race == charRace[3]) {
     const response = await fetch("https://www.dnd5eapi.co/api/races/gnome");
@@ -210,6 +247,11 @@ async function apiStuff() {
       character.align + ": " + alignment;
     document.getElementById("genderPop").textContent = character.gender;
     document.getElementById("classPop").textContent = character.class;
+    localStorage.setItem("charAge", character.age + ": " + age);
+    localStorage.setItem("charGender", character.gender);
+    localStorage.setItem("charRace", character.race + ": " + size_description);
+    localStorage.setItem("charClass", character.class);
+    localStorage.setItem("charAlignment", character.align + ": " + alignment);
   }
   if (character.race == charRace[4]) {
     const response = await fetch("https://www.dnd5eapi.co/api/races/half-elf");
@@ -222,6 +264,11 @@ async function apiStuff() {
       character.align + ": " + alignment;
     document.getElementById("genderPop").textContent = character.gender;
     document.getElementById("classPop").textContent = character.class;
+    localStorage.setItem("charAge", character.age + ": " + age);
+    localStorage.setItem("charGender", character.gender);
+    localStorage.setItem("charRace", character.race + ": " + size_description);
+    localStorage.setItem("charClass", character.class);
+    localStorage.setItem("charAlignment", character.align + ": " + alignment);
   }
   if (character.race == charRace[5]) {
     const response = await fetch("https://www.dnd5eapi.co/api/races/half-orc");
@@ -234,6 +281,11 @@ async function apiStuff() {
       character.align + ": " + alignment;
     document.getElementById("genderPop").textContent = character.gender;
     document.getElementById("classPop").textContent = character.class;
+    localStorage.setItem("charAge", character.age + ": " + age);
+    localStorage.setItem("charGender", character.gender);
+    localStorage.setItem("charRace", character.race + ": " + size_description);
+    localStorage.setItem("charClass", character.class);
+    localStorage.setItem("charAlignment", character.align + ": " + alignment);
   }
   if (character.race == charRace[6]) {
     const response = await fetch("https://www.dnd5eapi.co/api/races/halfling");
@@ -246,6 +298,11 @@ async function apiStuff() {
       character.align + ": " + alignment;
     document.getElementById("genderPop").textContent = character.gender;
     document.getElementById("classPop").textContent = character.class;
+    localStorage.setItem("charAge", character.age + ": " + age);
+    localStorage.setItem("charGender", character.gender);
+    localStorage.setItem("charRace", character.race + ": " + size_description);
+    localStorage.setItem("charClass", character.class);
+    localStorage.setItem("charAlignment", character.align + ": " + alignment);
   }
   if (character.race == charRace[7]) {
     const response = await fetch("https://www.dnd5eapi.co/api/races/human");
@@ -258,6 +315,11 @@ async function apiStuff() {
       character.align + ": " + alignment;
     document.getElementById("genderPop").textContent = character.gender;
     document.getElementById("classPop").textContent = character.class;
+    localStorage.setItem("charAge", character.age + ": " + age);
+    localStorage.setItem("charGender", character.gender);
+    localStorage.setItem("charRace", character.race + ": " + size_description);
+    localStorage.setItem("charClass", character.class);
+    localStorage.setItem("charAlignment", character.align + ": " + alignment);
   }
   if (character.race == charRace[8]) {
     const response = await fetch("https://www.dnd5eapi.co/api/races/tiefling");
@@ -270,9 +332,43 @@ async function apiStuff() {
       character.align + ": " + alignment;
     document.getElementById("genderPop").textContent = character.gender;
     document.getElementById("classPop").textContent = character.class;
+    localStorage.setItem("charAge", character.age + ": " + age);
+    localStorage.setItem("charGender", character.gender);
+    localStorage.setItem("charRace", character.race + ": " + size_description);
+    localStorage.setItem("charClass", character.class);
+    localStorage.setItem("charAlignment", character.align + ": " + alignment);
   }
 }
 
 console.log(character);
 
 document.getElementById("randomize").addEventListener("click", getRandom);
+
+//Used to display last generated Character
+var characterDisplay = localStorage.getItem("charDisplay");
+
+document.getElementById("charImg").src = characterDisplay;
+
+var characterName = localStorage.getItem("charName");
+
+document.getElementById("namePop").textContent = characterName;
+
+var characterAge = localStorage.getItem("charAge");
+
+document.getElementById("agePop").textContent = characterAge;
+
+var characterGender = localStorage.getItem("charGender");
+
+document.getElementById("genderPop").textContent = characterGender;
+
+var characterRace = localStorage.getItem("charRace");
+
+document.getElementById("racePop").textContent = characterRace;
+
+var characterClass = localStorage.getItem("charClass");
+
+document.getElementById("classPop").textContent = characterClass;
+
+var characterAlignment = localStorage.getItem("charAlignment");
+
+document.getElementById("alignPop").textContent = characterAlignment;
