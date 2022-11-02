@@ -348,8 +348,35 @@ console.log(character);
 document.getElementById("randomize").addEventListener("click", getRandom);
 
 //Used to display last generated Character
-var characterDisplay = localStorage.getItem("charDisplay");
+function renderLastCharacter() {
+  var characterDisplay = localStorage.getItem("charDisplay")
+  var characterName = localStorage.getItem("charName");    
+  var characterAge = localStorage.getItem("charAge");    
+  var characterGender = localStorage.getItem("charGender");    
+  var characterRace = localStorage.getItem("charRace");    
+  var characterClass = localStorage.getItem("charClass");    
+  var characterAlignment = localStorage.getItem("charAlignment");    
+  if (characterDisplay !== null) {
+    var characterDisplay = localStorage.getItem("charDisplay")
+    document.getElementById("charImg").src = characterDisplay;
+    var characterName = localStorage.getItem("charName");    
+    document.getElementById("namePop").textContent = characterName;
+    var characterAge = localStorage.getItem("charAge");    
+    document.getElementById("agePop").textContent = characterAge;
+    var characterGender = localStorage.getItem("charGender");    
+    document.getElementById("genderPop").textContent = characterGender;
+    var characterRace = localStorage.getItem("charRace");    
+    document.getElementById("racePop").textContent = characterRace;
+    var characterClass = localStorage.getItem("charClass");    
+    document.getElementById("classPop").textContent = characterClass;
+    var characterAlignment = localStorage.getItem("charAlignment");    
+    document.getElementById("alignPop").textContent = characterAlignment;
+  } else {
+    return;
+  }
+}
 
+<<<<<<< HEAD
 document.getElementById("charImg").src = characterDisplay;
 
 var characterName = localStorage.getItem("charName");
@@ -376,3 +403,11 @@ var characterAlignment = localStorage.getItem("charAlignment");
 
 document.getElementById("alignPop").textContent = characterAlignment;
 >>>>>>> 7b76ef9581c15d05278d45078da12d0a0ead9274
+=======
+// The init() function fires when the page is loaded 
+function init() {
+  // When the init function is executed, the code inside renderLastGrade function will also execute
+  renderLastCharacter();
+}
+init();
+>>>>>>> ebc55c2d529bd08a3a93e9a801e1dd32bd83c5c4

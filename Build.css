@@ -5,7 +5,17 @@ body {
     margin: 5%;
     margin-top: 0%;
 }
-
+    
+.input-field {
+    background-color: transparent;
+    width: 40%;
+    border-radius: 10px;
+    margin: 1%;
+    text-align: center;
+    color: black;
+    
+}
+    
 .sheet {
     border-radius: 10px;
     justify-content: center;
@@ -34,6 +44,54 @@ body {
     margin: 15px;
     padding: 10px;
 }
+
+.area {
+    width: 100%;
+    max-width: 500px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+}
+
+.box{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 1%;
+}
+
+.left {
+    width: 33.3%;
+    margin: 0 !important;
+}
+
+.right{
+    margin:auto;
+    justify-content: center;
+}
+
+.right img {
+    width:100%;
+    max-width: 500px;
+    height:auto;
+    border: solid black;
+    border-radius: 10px;
+    justify-content: center;
+}
+
+
+.value {
+    margin-left: 0 !important;
+    padding: 0;
+    height: 15.9%;
+}
+
+.inf {
+    margin: 1%;
+    width: 48% !important;
+    height: 10% !important;
+}
+
 
 #redDragon {
     width:100%;
@@ -76,20 +134,20 @@ h1 {
     justify-content: 100px;
     border: 5px solid black;
     float: left;
-}
+  }
   
-#generate-link img:hover{
+  #generate-link img:hover{
     width: 225px;
     height: 225px;
-}
+  }
 
-.link-items {
+  .link-items {
     display: flex;
     flex-wrap: wrap;
-}
+  }
 
 .info {
-    margin-top: 5%;
+margin-top: 5%;
 }
 
 .picture img {
@@ -99,6 +157,8 @@ h1 {
 
 .picture {
     align-content: center;
+    justify-content: center;
+    align-items: center;
     justify-content: center;
 }
 
