@@ -1,13 +1,3 @@
-let apiAlignment={
-  alignment:"",
-};
-let apiAge={
-  age: "",
-};
-let apiSize={
-  size:"",
-};
-let characterName = document.getElementById("name");
 var charDisplay = [
   "./assets/male.dragonborn.jpg",
   "./assets/female.dragonborn.jpg",
@@ -70,10 +60,10 @@ let charClass = [
   "Class: Wizard",
 ];
 
-let charGender = ["Gender: Male", "Gender: Female" ];
+let charGender = ["Gender: Male", "Gender: Female"];
 
 let character = {
-  name: "",
+  name: "Name: ",
   age: "",
   gender: "",
   race: "",
@@ -96,152 +86,193 @@ function getRandom() {
   populateChar();
 }
 
+async function populateChar() {
+  fetch("https://randommer.io/api/Name?nameType=surname&quantity=2", {
+    headers: {
+      "X-Api-Key": "e0d893dd1f2d4aa4ad5ffb9524eddb90",
+    },
+  }).then(function (res){
+    return res.json();
+  }).then(function (obj){
+    character.name=obj
+    document.getElementById("namePop").textContent = "Name: " + character.name;
+  })
 
 
-function populateChar() {
-  //document.getElementById("namePop").textContent = character.name;
-  document.getElementById("agePop").textContent = character.age;
-  document.getElementById("genderPop").textContent = character.gender;
-  document.getElementById("racePop").textContent = character.race;
-  document.getElementById("classPop").textContent = character.class;
-  document.getElementById("alignPop").textContent = character.align;
-    displayImg(); 
+  displayImg();
 }
 
-
-
-function displayImg() { 
-  if (character.gender==charGender[0] && character.race == charRace[0]){
-  document.getElementById("charImg").src = charDisplay[0];
+function displayImg() {
+  if (character.gender == charGender[0] && character.race == charRace[0]) {
+    document.getElementById("charImg").src = charDisplay[0];
   }
-  if (character.gender==charGender[1] && character.race == charRace[0]){
+  if (character.gender == charGender[1] && character.race == charRace[0]) {
     document.getElementById("charImg").src = charDisplay[1];
-    }
-    if (character.gender==charGender[0] && character.race == charRace[1]){
-      document.getElementById("charImg").src = charDisplay[2];
-      }
-      if (character.gender==charGender[1] && character.race == charRace[1]){
-        document.getElementById("charImg").src = charDisplay[3];
-        }
-        if (character.gender==charGender[0] && character.race == charRace[2]){
-          document.getElementById("charImg").src = charDisplay[4];
-          }
-          if (character.gender==charGender[1] && character.race == charRace[2]){
-            document.getElementById("charImg").src = charDisplay[5];
-            }
-            if (character.gender==charGender[0] && character.race == charRace[3]){
-              document.getElementById("charImg").src = charDisplay[6];
-              }
-              if (character.gender==charGender[1] && character.race == charRace[3]){
-                document.getElementById("charImg").src = charDisplay[7];
-                }
-                if (character.gender==charGender[0] && character.race == charRace[4]){
-                  document.getElementById("charImg").src = charDisplay[8];
-                  }
-                  if (character.gender==charGender[1] && character.race == charRace[4]){
-                    document.getElementById("charImg").src = charDisplay[9];
-                    }
-                    if (character.gender==charGender[0] && character.race == charRace[5]){
-                      document.getElementById("charImg").src = charDisplay[10];
-                      }
-                      if (character.gender==charGender[1] && character.race == charRace[5]){
-                        document.getElementById("charImg").src = charDisplay[11];
-                        }
-                        if (character.gender==charGender[0] && character.race == charRace[6]){
-                          document.getElementById("charImg").src = charDisplay[12];
-                          }
-                          if (character.gender==charGender[1] && character.race == charRace[6]){
-                            document.getElementById("charImg").src = charDisplay[13];
-                            }
-                            if (character.gender==charGender[0] && character.race == charRace[7]){
-                              document.getElementById("charImg").src = charDisplay[14];
-                              }
-                              if (character.gender==charGender[1] && character.race == charRace[7]){
-                                document.getElementById("charImg").src = charDisplay[15];
-                                }
-                                if (character.gender==charGender[0] && character.race == charRace[8]){
-                                  document.getElementById("charImg").src = charDisplay[16];
-                                  }
-                                  if (character.gender==charGender[1] && character.race == charRace[8]){
-                                    document.getElementById("charImg").src = charDisplay[17];
-                                    }
+  }
+  if (character.gender == charGender[0] && character.race == charRace[1]) {
+    document.getElementById("charImg").src = charDisplay[2];
+  }
+  if (character.gender == charGender[1] && character.race == charRace[1]) {
+    document.getElementById("charImg").src = charDisplay[3];
+  }
+  if (character.gender == charGender[0] && character.race == charRace[2]) {
+    document.getElementById("charImg").src = charDisplay[4];
+  }
+  if (character.gender == charGender[1] && character.race == charRace[2]) {
+    document.getElementById("charImg").src = charDisplay[5];
+  }
+  if (character.gender == charGender[0] && character.race == charRace[3]) {
+    document.getElementById("charImg").src = charDisplay[6];
+  }
+  if (character.gender == charGender[1] && character.race == charRace[3]) {
+    document.getElementById("charImg").src = charDisplay[7];
+  }
+  if (character.gender == charGender[0] && character.race == charRace[4]) {
+    document.getElementById("charImg").src = charDisplay[8];
+  }
+  if (character.gender == charGender[1] && character.race == charRace[4]) {
+    document.getElementById("charImg").src = charDisplay[9];
+  }
+  if (character.gender == charGender[0] && character.race == charRace[5]) {
+    document.getElementById("charImg").src = charDisplay[10];
+  }
+  if (character.gender == charGender[1] && character.race == charRace[5]) {
+    document.getElementById("charImg").src = charDisplay[11];
+  }
+  if (character.gender == charGender[0] && character.race == charRace[6]) {
+    document.getElementById("charImg").src = charDisplay[12];
+  }
+  if (character.gender == charGender[1] && character.race == charRace[6]) {
+    document.getElementById("charImg").src = charDisplay[13];
+  }
+  if (character.gender == charGender[0] && character.race == charRace[7]) {
+    document.getElementById("charImg").src = charDisplay[14];
+  }
+  if (character.gender == charGender[1] && character.race == charRace[7]) {
+    document.getElementById("charImg").src = charDisplay[15];
+  }
+  if (character.gender == charGender[0] && character.race == charRace[8]) {
+    document.getElementById("charImg").src = charDisplay[16];
+  }
+  if (character.gender == charGender[1] && character.race == charRace[8]) {
+    document.getElementById("charImg").src = charDisplay[17];
+  }
   apiStuff();
 }
 
-async function apiStuff(){
-  if (character.race==charRace[0]){
-  const response = await fetch('https://www.dnd5eapi.co/api/races/dragonborn');
-  const data= await response.json();
-  const { size_description, age, alignment}=data;
-  document.getElementById("agePop").textContent = character.age+ ': ' +age;
-  document.getElementById("racePop").textContent = character.race+ ': ' +size_description;
-  document.getElementById("alignPop").textContent = character.align + ': ' + alignment;
-}
-if (character.race==charRace[1]){
-  const response = await fetch('https://www.dnd5eapi.co/api/races/dwarf');
-  const data= await response.json();
-  const { size_description, age, alignment}=data;
-  document.getElementById("agePop").textContent = character.age+ ': ' +age;
-  document.getElementById("racePop").textContent = character.race+ ': ' +size_description;
-  document.getElementById("alignPop").textContent = character.align + ': ' + alignment;
-}
-if (character.race==charRace[2]){
-  const response = await fetch('https://www.dnd5eapi.co/api/races/elf');
-  const data= await response.json();
-  const { size_description, age, alignment}=data;
-  document.getElementById("agePop").textContent = character.age + ': ' +age;
-  document.getElementById("racePop").textContent = character.race + ': ' + size_description;
-  document.getElementById("alignPop").textContent = character.align + ': ' + alignment;
-}
-if (character.race==charRace[3]){
-  const response = await fetch('https://www.dnd5eapi.co/api/races/gnome');
-  const data= await response.json();
-  const { size_description, age, alignment}=data;
-  document.getElementById("agePop").textContent = character.age + ': ' +age;
-  document.getElementById("racePop").textContent = character.race + ': ' + size_description;
-  document.getElementById("alignPop").textContent = character.align + ': ' + alignment;
-}
-if (character.race==charRace[4]){
-  const response = await fetch('https://www.dnd5eapi.co/api/races/dhalf-elf');
-  const data= await response.json();
-  const { size_description, age, alignment}=data;
-  document.getElementById("agePop").textContent = character.age + ': ' + age;
-  document.getElementById("racePop").textContent = character.race + ': ' + size_description;
-  document.getElementById("alignPop").textContent = character.align + ': ' + alignment;
-}
-if (character.race==charRace[5]){
-  const response = await fetch('https://www.dnd5eapi.co/api/races/half-orc');
-  const data= await response.json();
-  const { size_description, age, alignment}=data;
-  document.getElementById("agePop").textContent = character.age + ': ' + age;
-  document.getElementById("racePop").textContent = character.race + ': ' + size_description;
-  document.getElementById("alignPop").textContent = character.align + ': ' + alignment;
-}
-if (character.race==charRace[6]){
-  const response = await fetch('https://www.dnd5eapi.co/api/races/halfling');
-  const data= await response.json();
-  const { size_description, age, alignment}=data;
-  document.getElementById("agePop").textContent = character.age + ': ' + age;
-  document.getElementById("racePop").textContent = character.race + ': ' + size_description;
-  document.getElementById("alignPop").textContent = character.align + ': ' + alignment;
-}
-if (character.race==charRace[7]){
-  const response = await fetch('https://www.dnd5eapi.co/api/races/human');
-  const data= await response.json();
-  const { size_description, age, alignment}=data;
-  document.getElementById("agePop").textContent = character.age + ': ' + age;
-  document.getElementById("racePop").textContent = character.race + ': ' + size_description;
-  document.getElementById("alignPop").textContent = character.align + ': ' + alignment;
-}
-if (character.race==charRace[8]){
-  const response = await fetch('https://www.dnd5eapi.co/api/races/tiefling');
-  const data= await response.json();
-  const { size_description, age, alignment}=data;
-  document.getElementById("agePop").textContent = character.age + ': ' + age;
-  document.getElementById("racePop").textContent = character.race + ': ' + size_description;
-  document.getElementById("alignPop").textContent = character.align + ': ' + alignment;
-}
+async function apiStuff() {
+  if (character.race == charRace[0]) {
+    const response = await fetch(
+      "https://www.dnd5eapi.co/api/races/dragonborn"
+    );
+    const data = await response.json();
+    const { size_description, age, alignment } = data;
+    document.getElementById("agePop").textContent = character.age + ": " + age;
+    document.getElementById("racePop").textContent =
+      character.race + ": " + size_description;
+    document.getElementById("alignPop").textContent =
+      character.align + ": " + alignment;
+    document.getElementById("genderPop").textContent = character.gender;
+    document.getElementById("classPop").textContent = character.class;
+  }
+  if (character.race == charRace[1]) {
+    const response = await fetch("https://www.dnd5eapi.co/api/races/dwarf");
+    const data = await response.json();
+    const { size_description, age, alignment } = data;
+    document.getElementById("agePop").textContent = character.age + ": " + age;
+    document.getElementById("racePop").textContent =
+      character.race + ": " + size_description;
+    document.getElementById("alignPop").textContent =
+      character.align + ": " + alignment;
+    document.getElementById("genderPop").textContent = character.gender;
+    document.getElementById("classPop").textContent = character.class;
+  }
+  if (character.race == charRace[2]) {
+    const response = await fetch("https://www.dnd5eapi.co/api/races/elf");
+    const data = await response.json();
+    const { size_description, age, alignment } = data;
+    document.getElementById("agePop").textContent = character.age + ": " + age;
+    document.getElementById("racePop").textContent =
+      character.race + ": " + size_description;
+    document.getElementById("alignPop").textContent =
+      character.align + ": " + alignment;
+    document.getElementById("genderPop").textContent = character.gender;
+    document.getElementById("classPop").textContent = character.class;
+  }
+  if (character.race == charRace[3]) {
+    const response = await fetch("https://www.dnd5eapi.co/api/races/gnome");
+    const data = await response.json();
+    const { size_description, age, alignment } = data;
+    document.getElementById("agePop").textContent = character.age + ": " + age;
+    document.getElementById("racePop").textContent =
+      character.race + ": " + size_description;
+    document.getElementById("alignPop").textContent =
+      character.align + ": " + alignment;
+    document.getElementById("genderPop").textContent = character.gender;
+    document.getElementById("classPop").textContent = character.class;
+  }
+  if (character.race == charRace[4]) {
+    const response = await fetch("https://www.dnd5eapi.co/api/races/half-elf");
+    const data = await response.json();
+    const { size_description, age, alignment } = data;
+    document.getElementById("agePop").textContent = character.age + ": " + age;
+    document.getElementById("racePop").textContent =
+      character.race + ": " + size_description;
+    document.getElementById("alignPop").textContent =
+      character.align + ": " + alignment;
+    document.getElementById("genderPop").textContent = character.gender;
+    document.getElementById("classPop").textContent = character.class;
+  }
+  if (character.race == charRace[5]) {
+    const response = await fetch("https://www.dnd5eapi.co/api/races/half-orc");
+    const data = await response.json();
+    const { size_description, age, alignment } = data;
+    document.getElementById("agePop").textContent = character.age + ": " + age;
+    document.getElementById("racePop").textContent =
+      character.race + ": " + size_description;
+    document.getElementById("alignPop").textContent =
+      character.align + ": " + alignment;
+    document.getElementById("genderPop").textContent = character.gender;
+    document.getElementById("classPop").textContent = character.class;
+  }
+  if (character.race == charRace[6]) {
+    const response = await fetch("https://www.dnd5eapi.co/api/races/halfling");
+    const data = await response.json();
+    const { size_description, age, alignment } = data;
+    document.getElementById("agePop").textContent = character.age + ": " + age;
+    document.getElementById("racePop").textContent =
+      character.race + ": " + size_description;
+    document.getElementById("alignPop").textContent =
+      character.align + ": " + alignment;
+    document.getElementById("genderPop").textContent = character.gender;
+    document.getElementById("classPop").textContent = character.class;
+  }
+  if (character.race == charRace[7]) {
+    const response = await fetch("https://www.dnd5eapi.co/api/races/human");
+    const data = await response.json();
+    const { size_description, age, alignment } = data;
+    document.getElementById("agePop").textContent = character.age + ": " + age;
+    document.getElementById("racePop").textContent =
+      character.race + ": " + size_description;
+    document.getElementById("alignPop").textContent =
+      character.align + ": " + alignment;
+    document.getElementById("genderPop").textContent = character.gender;
+    document.getElementById("classPop").textContent = character.class;
+  }
+  if (character.race == charRace[8]) {
+    const response = await fetch("https://www.dnd5eapi.co/api/races/tiefling");
+    const data = await response.json();
+    const { size_description, age, alignment } = data;
+    document.getElementById("agePop").textContent = character.age + ": " + age;
+    document.getElementById("racePop").textContent =
+      character.race + ": " + size_description;
+    document.getElementById("alignPop").textContent =
+      character.align + ": " + alignment;
+    document.getElementById("genderPop").textContent = character.gender;
+    document.getElementById("classPop").textContent = character.class;
+  }
 }
 
+console.log(character);
 
 document.getElementById("randomize").addEventListener("click", getRandom);
