@@ -1,3 +1,12 @@
+let apiAlignment={
+  alignment:"",
+};
+let apiAge={
+  age: "",
+};
+let apiSize={
+  size:"",
+};
 let characterName = document.getElementById("name");
 var charDisplay = [
   "./assets/male.dragonborn.jpg",
@@ -20,18 +29,18 @@ var charDisplay = [
   "./assets/female.tiefling.jpg",
 ];
 
-let charAge = [" Age: Young", "Age: Middle Aged", "Age: Elderly"];
+let charAge = ["Age: Young", "Age: Middle Aged", "Age: Elderly"];
 
 let charRace = [
-  "Race: Dragonborn",
-  "Race: Dwarf",
-  "Race: Elf",
-  "Race: Gnome",
-  "Race: Half-Elf",
-  "Race: Half-Orc",
-  "Race: Halfling",
-  "Race: Human",
-  "Race: Tiefling",
+  "Race: Dragonborn ",
+  "Race: Dwarf ",
+  "Race: Elf ",
+  "Race: Gnome ",
+  "Race: Half-Elf ",
+  "Race: Half-Orc ",
+  "Race: Halfling ",
+  "Race: Human ",
+  "Race: Tiefling ",
 ];
 
 let charAlign = [
@@ -61,7 +70,7 @@ let charClass = [
   "Class: Wizard",
 ];
 
-let charGender = ["Gender: Male", "Gender: Female"];
+let charGender = ["Gender: Male", "Gender: Female" ];
 
 let character = {
   name: "",
@@ -87,6 +96,8 @@ function getRandom() {
   populateChar();
 }
 
+
+
 function populateChar() {
   //document.getElementById("namePop").textContent = character.name;
   document.getElementById("agePop").textContent = character.age;
@@ -94,8 +105,10 @@ function populateChar() {
   document.getElementById("racePop").textContent = character.race;
   document.getElementById("classPop").textContent = character.class;
   document.getElementById("alignPop").textContent = character.align;
-  displayImg();
+    displayImg(); 
 }
+
+
 
 function displayImg() { 
   if (character.gender==charGender[0] && character.race == charRace[0]){
@@ -152,7 +165,83 @@ function displayImg() {
                                   if (character.gender==charGender[1] && character.race == charRace[8]){
                                     document.getElementById("charImg").src = charDisplay[17];
                                     }
-
+  apiStuff();
 }
+
+async function apiStuff(){
+  if (character.race==charRace[0]){
+  const response = await fetch('https://www.dnd5eapi.co/api/races/dragonborn');
+  const data= await response.json();
+  const { size_description, age, alignment}=data;
+  document.getElementById("agePop").textContent = character.age+ ': ' +age;
+  document.getElementById("racePop").textContent = character.race+ ': ' +size_description;
+  document.getElementById("alignPop").textContent = character.align + ': ' + alignment;
+}
+if (character.race==charRace[1]){
+  const response = await fetch('https://www.dnd5eapi.co/api/races/dwarf');
+  const data= await response.json();
+  const { size_description, age, alignment}=data;
+  document.getElementById("agePop").textContent = character.age+ ': ' +age;
+  document.getElementById("racePop").textContent = character.race+ ': ' +size_description;
+  document.getElementById("alignPop").textContent = character.align + ': ' + alignment;
+}
+if (character.race==charRace[2]){
+  const response = await fetch('https://www.dnd5eapi.co/api/races/elf');
+  const data= await response.json();
+  const { size_description, age, alignment}=data;
+  document.getElementById("agePop").textContent = character.age + ': ' +age;
+  document.getElementById("racePop").textContent = character.race + ': ' + size_description;
+  document.getElementById("alignPop").textContent = character.align + ': ' + alignment;
+}
+if (character.race==charRace[3]){
+  const response = await fetch('https://www.dnd5eapi.co/api/races/gnome');
+  const data= await response.json();
+  const { size_description, age, alignment}=data;
+  document.getElementById("agePop").textContent = character.age + ': ' +age;
+  document.getElementById("racePop").textContent = character.race + ': ' + size_description;
+  document.getElementById("alignPop").textContent = character.align + ': ' + alignment;
+}
+if (character.race==charRace[4]){
+  const response = await fetch('https://www.dnd5eapi.co/api/races/dhalf-elf');
+  const data= await response.json();
+  const { size_description, age, alignment}=data;
+  document.getElementById("agePop").textContent = character.age + ': ' + age;
+  document.getElementById("racePop").textContent = character.race + ': ' + size_description;
+  document.getElementById("alignPop").textContent = character.align + ': ' + alignment;
+}
+if (character.race==charRace[5]){
+  const response = await fetch('https://www.dnd5eapi.co/api/races/half-orc');
+  const data= await response.json();
+  const { size_description, age, alignment}=data;
+  document.getElementById("agePop").textContent = character.age + ': ' + age;
+  document.getElementById("racePop").textContent = character.race + ': ' + size_description;
+  document.getElementById("alignPop").textContent = character.align + ': ' + alignment;
+}
+if (character.race==charRace[6]){
+  const response = await fetch('https://www.dnd5eapi.co/api/races/halfling');
+  const data= await response.json();
+  const { size_description, age, alignment}=data;
+  document.getElementById("agePop").textContent = character.age + ': ' + age;
+  document.getElementById("racePop").textContent = character.race + ': ' + size_description;
+  document.getElementById("alignPop").textContent = character.align + ': ' + alignment;
+}
+if (character.race==charRace[7]){
+  const response = await fetch('https://www.dnd5eapi.co/api/races/human');
+  const data= await response.json();
+  const { size_description, age, alignment}=data;
+  document.getElementById("agePop").textContent = character.age + ': ' + age;
+  document.getElementById("racePop").textContent = character.race + ': ' + size_description;
+  document.getElementById("alignPop").textContent = character.align + ': ' + alignment;
+}
+if (character.race==charRace[8]){
+  const response = await fetch('https://www.dnd5eapi.co/api/races/tiefling');
+  const data= await response.json();
+  const { size_description, age, alignment}=data;
+  document.getElementById("agePop").textContent = character.age + ': ' + age;
+  document.getElementById("racePop").textContent = character.race + ': ' + size_description;
+  document.getElementById("alignPop").textContent = character.align + ': ' + alignment;
+}
+}
+
 
 document.getElementById("randomize").addEventListener("click", getRandom);
