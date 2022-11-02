@@ -38,11 +38,12 @@ header {
   justify-content: center;
   background-color: transparent;
   box-shadow: none;
+  text-align: center;
 }
 
 .card-body {
   min-height: 100px;
-  text-align: center;
+  
   display: flex;
   justify-content: center;
 }

@@ -18,7 +18,7 @@ body {
 .sheet {
     border-radius: 10px;
     justify-content: center;
-    width: 700px;
+    width: 800px;
     margin: auto;
     padding: 15px;
     border: 5px;
@@ -29,7 +29,7 @@ body {
 
 .sheet p {
     display: flex;
-    width: 300px;
+    width: 500px;
     justify-content: center;
     border-style: solid;
     border-color: black;
@@ -39,6 +39,9 @@ body {
     margin: auto;
     display: flex;
     flex-wrap: wrap;
+    border: 10px;
+    margin: 15px;
+    padding: 10px;
 }
 
 .area {
@@ -68,7 +71,7 @@ body {
 
 .right img {
     width:100%;
-    max-width: 300px;
+    max-width: 500px;
     height:auto;
     border: solid black;
     border-radius: 10px;
@@ -88,16 +91,6 @@ body {
     height: 10% !important;
 }
 
-#greenDragon{
-    justify-content: center;
-    align-content: center;
-}
-
-#greenDragon img {
-    width:100%;
-    max-width: 500px;
-    height:auto;
-}
 
 #redDragon {
     width:100%;
@@ -111,4 +104,13 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.randomItems {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 14px;
+}
+
+.button {
+    
 }
