@@ -112,7 +112,11 @@ async function populateChar() {
 }
 
 
+<<<<<<< HEAD
+document.getElementById("randomize").addEventListener("click", getRandom);
+=======
   
+>>>>>>> 4aa0ef3fd2aff6005d6571210324aa377dce012f
 
 function displayImg() {
   if (character.gender == charGender[0] && character.race == charRace[0]) {
@@ -383,6 +387,34 @@ function renderLastCharacter() {
 }
 
 
+<<<<<<< HEAD
+document.getElementById("charImg").src = characterDisplay;
+
+var characterName = localStorage.getItem("charName");
+
+document.getElementById("namePop").textContent = characterName;
+
+var characterAge = localStorage.getItem("charAge");
+
+document.getElementById("agePop").textContent = characterAge;
+
+var characterGender = localStorage.getItem("charGender");
+
+document.getElementById("genderPop").textContent = characterGender;
+
+var characterRace = localStorage.getItem("charRace");
+
+document.getElementById("racePop").textContent = characterRace;
+
+var characterClass = localStorage.getItem("charClass");
+
+document.getElementById("classPop").textContent = characterClass;
+
+var characterAlignment = localStorage.getItem("charAlignment");
+
+document.getElementById("alignPop").textContent = characterAlignment;
+=======
+>>>>>>> 4aa0ef3fd2aff6005d6571210324aa377dce012f
 
 // The init() function fires when the page is loaded 
 function init() {
@@ -390,3 +422,4 @@ function init() {
   renderLastCharacter();
 }
 init();
+
