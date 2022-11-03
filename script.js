@@ -86,6 +86,15 @@ function getRandom() {
   populateChar();
 }
 
+document.getElementById("submit").onclick = function populateChar(){
+  var myName=document.getElementById("nameIn").value;
+  if (myName){
+  character.name=myName;
+  document.getElementById("namePop").textContent = "Name: " + character.name;
+}
+}
+
+
 async function populateChar() {
   fetch("https://randommer.io/api/Name?nameType=surname&quantity=2", {
     headers: {
@@ -99,13 +108,15 @@ async function populateChar() {
     localStorage.setItem("charName", "Name: " + character.name);
 
   })
-
-
   displayImg();
 }
 
 
+<<<<<<< HEAD
 document.getElementById("randomize").addEventListener("click", getRandom);
+=======
+  
+>>>>>>> 4aa0ef3fd2aff6005d6571210324aa377dce012f
 
 function displayImg() {
   if (character.gender == charGender[0] && character.race == charRace[0]) {
@@ -343,7 +354,6 @@ async function apiStuff() {
   }
 }
 
-console.log(character);
 
 document.getElementById("randomize").addEventListener("click", getRandom);
 
@@ -377,6 +387,7 @@ function renderLastCharacter() {
 }
 
 
+<<<<<<< HEAD
 document.getElementById("charImg").src = characterDisplay;
 
 var characterName = localStorage.getItem("charName");
@@ -402,6 +413,8 @@ document.getElementById("classPop").textContent = characterClass;
 var characterAlignment = localStorage.getItem("charAlignment");
 
 document.getElementById("alignPop").textContent = characterAlignment;
+=======
+>>>>>>> 4aa0ef3fd2aff6005d6571210324aa377dce012f
 
 // The init() function fires when the page is loaded 
 function init() {
