@@ -7,14 +7,14 @@ It offers two methods of creation:
  - One is a random generator that will create a character for you based on the most current (5th Edition) DnD classes, races, etc. 
 
  # How does it work?
- After navigating to the home page, you will select whether you would like to generate a random character. The user will select the 'Generate Character' button.
+ After navigating to the home page, you will select the button to generate a random character. The user will select the 'Generate Character' button.
 When the user accesses the new page, they will select the 'Randomize' button and generate a random character within parameters set by the 5th Edition of Dungeons and Dragons.
 
 # WHat is the purpose of this project?
 The purpose of thius challenge was to not only show an understanding of the material that has been covered so far in the bootcamp, but to also dmeonstrate what collaborating with a team in order to work on a group project would look like in the real world.
 
 # Where can you find this project?
-This project cam be found at 
+This project can be found at https://lomax12436.github.io/Super-Team-Project/
 
 # WHat does the Character Generator look like?
 
