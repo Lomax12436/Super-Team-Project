@@ -106,13 +106,10 @@ async function populateChar() {
     character.name=obj
     document.getElementById("namePop").textContent = "Name: " + character.name;
     localStorage.setItem("charName", "Name: " + character.name);
-
   })
   displayImg();
 }
 
-
-  
 
 function displayImg() {
   if (character.gender == charGender[0] && character.race == charRace[0]) {
