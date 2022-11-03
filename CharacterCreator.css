@@ -109,7 +109,11 @@ h1 {
 }
 
 .nameArea label{
-
+    justify-content: center;
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: black;
+    font-size: large;
 }
 
 .page-footer{
