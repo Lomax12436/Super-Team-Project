@@ -104,9 +104,9 @@ async function populateChar() {
   displayImg();
 }
 
-<<<<<<< HEAD
+
 document.getElementById("randomize").addEventListener("click", getRandom);
-=======
+
 function displayImg() {
   if (character.gender == charGender[0] && character.race == charRace[0]) {
     document.getElementById("charImg").src = charDisplay[0];
@@ -376,7 +376,7 @@ function renderLastCharacter() {
   }
 }
 
-<<<<<<< HEAD
+
 document.getElementById("charImg").src = characterDisplay;
 
 var characterName = localStorage.getItem("charName");
@@ -402,12 +402,11 @@ document.getElementById("classPop").textContent = characterClass;
 var characterAlignment = localStorage.getItem("charAlignment");
 
 document.getElementById("alignPop").textContent = characterAlignment;
->>>>>>> 7b76ef9581c15d05278d45078da12d0a0ead9274
-=======
+
 // The init() function fires when the page is loaded 
 function init() {
   // When the init function is executed, the code inside renderLastGrade function will also execute
   renderLastCharacter();
 }
 init();
->>>>>>> ebc55c2d529bd08a3a93e9a801e1dd32bd83c5c4
+
