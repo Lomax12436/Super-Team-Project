@@ -86,6 +86,15 @@ function getRandom() {
   populateChar();
 }
 
+document.getElementById("submit").onclick = function populateChar(){
+  var myName=document.getElementById("nameIn").value;
+  if (myName){
+  character.name=myName;
+  document.getElementById("namePop").textContent = "Name: " + character.name;
+}
+}
+
+
 async function populateChar() {
   fetch("https://randommer.io/api/Name?nameType=surname&quantity=2", {
     headers: {
@@ -99,10 +108,11 @@ async function populateChar() {
     localStorage.setItem("charName", "Name: " + character.name);
 
   })
-
-
   displayImg();
 }
+
+
+  
 
 function displayImg() {
   if (character.gender == charGender[0] && character.race == charRace[0]) {
@@ -340,7 +350,6 @@ async function apiStuff() {
   }
 }
 
-console.log(character);
 
 document.getElementById("randomize").addEventListener("click", getRandom);
 
@@ -372,6 +381,8 @@ function renderLastCharacter() {
     return;
   }
 }
+
+
 
 // The init() function fires when the page is loaded 
 function init() {
